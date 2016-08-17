@@ -7,7 +7,7 @@ Execute the following in order:
 2) bower install
 3) gulp serve
 
-##Usage
+#Usage
 Create json object according to the following format:
 ```
 profile =
