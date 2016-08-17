@@ -5,6 +5,7 @@
 
 #How to run
 Execute the following in order:
+- clone this project
 - npm install
 - bower install
 - gulp serve
