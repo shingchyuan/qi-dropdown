@@ -1,0 +1,53 @@
+<div class="dd-container">
+    <div class="dd-label" ng-click="vm.showList = !vm.showList" ng-style="{background:(vm.selected? 'white' : '')}">
+        <span ng-if="vm.selected">
+            <span ng-if="!vm.selected.driver">-</span>{{vm.selected.driver.name}} / <span ng-if="!vm.selected.vehicle">-</span>{{vm.selected.vehicle.plate}}
+        </span>
+        <span ng-show="!vm.selected">Select Driver to pair</span>
+        <span class="dd-label-icon"><img ng-src="app/components/directive/caret.png" /></span>
+    </div>
+
+    <div class="dd-content" ng-show="vm.showList">
+        <div class="dd-search">
+            <input type="text" autocomplete="off" ng-model="vm.query">
+            <span class="dd-search-logo"><img ng-src="app/components/directive/search.png" /></span>
+        </div>
+        <div class="dd-menu">
+                <ul>
+                    <li ng-repeat="profile in vm.list | filter: vm.filterList">
+                        <div class="trigger" ng-mouseenter="vm.updateXY($event)">
+                            <a href ng-click="vm.onSelect(profile)">
+                                <span ng-if="!profile.driver">-</span>{{profile.driver.name}} / <span ng-if="!profile.vehicle">-</span>{{profile.vehicle.plate}}
+                            </a>
+                        <span class="tooltip" ng-style="{bottom:vm.bottom, left:vm.left}">
+                            <table id="profile-table" cellspacing="0" cellpadding="0">
+                                <tr ng-if="profile.driver">
+                                    <td colspan="2">DRIVER</td>
+                                </tr>
+                                <tr ng-if="profile.driver">
+                                    <td><img ng-src="{{profile.driver.photo}}"></td>
+                                    <td>
+                                        <p>{{profile.driver.name}}</p>
+                                        <p>{{profile.driver.contact}}</p>
+                                    </td>
+                                </tr>
+                                <tr ng-if="profile.vehicle">
+                                    <td colspan="2">VEHICLE</td>
+                                </tr>
+                                <tr ng-if="profile.vehicle">
+                                    <td><img ng-src="{{profile.vehicle.photo}}"></td>
+                                    <td>
+                                        <p>{{profile.vehicle.plate}}</p>
+                                        <p>{{profile.vehicle.model}}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    </div>
+
+
+</div>
