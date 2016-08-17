@@ -47,3 +47,6 @@ Fetch selected value like this:
 ```
 {{vm.selected}}
 ```
+
+Source code:
+https://github.com/shingchyuan/qi-dropdown/tree/master/src/app/components/directive
