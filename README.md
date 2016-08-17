@@ -30,7 +30,7 @@ profile =
   {
     id : 4,
     driver : { name : 'Mr D', contact:'66666666', photo : 'http://placehold.it/120x120' },
-    vehicle : {plate : 'SGX3333A', model : 'Toyota', photo : 'http://placehold.it/120x120' }
+    vehicle : { plate : 'SGX3333A', model : 'Toyota', photo : 'http://placehold.it/120x120' }
   },
   {
     id : 5,
