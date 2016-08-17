@@ -48,5 +48,6 @@ Fetch selected value like this:
 {{vm.selected}}
 ```
 
-Source code:
+
+Directive source code can be found in:
 https://github.com/shingchyuan/qi-dropdown/tree/master/src/app/components/directive
