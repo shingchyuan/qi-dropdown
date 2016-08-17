@@ -1,11 +1,13 @@
 #Prerequisite
-install npm, bower, gulp.
+- npm (http://nodejs.org)
+- bower (npm install -g bower)
+- gulp (npm install -g gulp)
 
 #How to run
 Execute the following in order:
-1. npm install
-2. bower install
-3. gulp serve
+- npm install
+- bower install
+- gulp serve
 
 #Usage
 Create json object according to the following format:
